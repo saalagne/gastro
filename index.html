@@ -1,0 +1,110 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reservierungstool DEV</title><script defer="defer" src="main.js"></script></head><script>window.ReservationTool = {};
+    ReservationTool.config = {
+        urls: {
+            get_reservations: 'https://prod-248.westeurope.logic.azure.com/workflows/37b6d6b01caa46dca5a09d90b823435f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=bA3A8dP7Ao-uvRRJo9ON2cDhwQsh5Wn7xpIZiSxYV0c',
+            post_reservation: 'https://prod-61.westeurope.logic.azure.com:443/workflows/014c388cc06147d0b41cccc32b159712/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=v8FVkCjRQvVKMmFNvyQHkDYp8ySML9NRCZgfRsIfTEc',
+            get_reservation: '',
+            put_reservation: 'https://prod-221.westeurope.logic.azure.com:443/workflows/bee94f2e0fac42668eda12b88d637ebd/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=C-P8xDiWQCjfVcxQAKA5bOw6t7fqjtGzkT3rAc20hrQ',
+            delete_reservation: '',
+            privacy_policy: '/datenschutz'
+        },
+        basic_data: {
+            address: 'Ebrardstr. 30, 91054 Erlangen',
+            name: 'FoodKlub',
+        },
+        styles: {
+            primary_color: '#407846',
+            button_text_color: '#FFFFFF',
+        },
+        settings: {
+            closed_on: [1, 5],
+            default_reservation_time: {
+                hours: 18,
+                minutes: 30,
+                text: "18:30",
+            },
+            reservation_times: {
+                1: null,
+                0: {
+                    times: [
+                        "11:15", "11:30", "11:45", "12:00", "12:15", "12:30", "12:45", "13:00", "19:00", "19:15"
+                    ]
+                },
+                2: {
+                    times: [
+                        "11:15", "11:30", "11:45", "12:00", "12:15", "12:30", "12:45", "13:00"
+                    ]
+                },
+                3: {
+                    times: [
+                        "11:15", "11:30", "11:45", "12:00", "12:15", "12:30", "12:45", "13:00", "19:00", "19:15", "19:30"
+                    ]
+                },
+                4: {
+                    times: [
+                        "11:15", "11:30", "11:45", "12:00", "12:15", "12:30", "12:45", "13:00", "19:00", "19:15", "19:30"
+                    ]
+                },
+                5: {
+                    times: [
+                        "11:15", "11:30", "11:45", "12:00", "12:15", "12:30", "12:45", "13:00"
+                    ]
+                },
+                6: {
+                    times: [
+                        "17:00", "17:15", "17:30", "17:45", "18:00", "18:15", "18:30", "18:45", "19:00"
+                    ]
+                },
+            },
+            reservation_duration: 120,
+            default_number_of_bookable_seats: 15,
+            pre_reservation_duration: 36000,
+        },
+        texts: {
+            headline: null,
+            sub_headline: null,
+            tab_title_pick_date_and_seats_first: "Bitte vorerst Datum, Uhrzeit und Anzahl der Personen wählen",
+            notice_pick_date_and_seats_first: null,
+            loading_calendar: "Reservierungskalender wird geladen...",
+            send_button_text: "Senden",
+            proceed_button_text: "Weiter zu den Kontaktdaten",
+            maximum_number_seats_action: "Bei mehr Personen bitte anrufen",
+            loading_timeslots: "Verfügbare Zeiten werden abgerufen",
+            loading_pre_reservation: "Die Reservierung wird überprüft...",
+            loading_submitting_reservation: "Die Reservierung wird abgeschickt...",
+            success_submitting_reservation: "Die Reservierung wurde erfolgreich abgeschickt.",
+            loading_reservation: "Reservierung wird geladen...",
+            edit_reservation_button_text: "Reservierung aktualisieren",
+            privacy_consent_text: "Ich habe die Datenschutzbestimmungen gelesen und zur Kenntnis genommen.",
+        },
+        fields: [
+            {
+                type: "text",
+                name: "name",
+                label: "Name",
+                required: true,
+                placeholder: "Name"
+            },
+            {
+                type: "email",
+                label: "E-Mail Adresse",
+                name: "email",
+                required: true,
+                placeholder: "E-Mail"
+            },
+            {
+                type: "tel",
+                label: "Telefon",
+                name: "phone",
+                required: false,
+                placeholder: "Telefon"
+            },
+            {
+                type: "textarea",
+                label: "Notizen",
+                name: "notes",
+                required: false,
+                placeholder: "Notizen, Wünsche, Anmerkungen etc."
+            },
+        ]
+    }</script><body><body style="padding: 5px; background-color: #e4e4e4; display: flex; justify-content: center"><div id="mikan365-root" style="width: 100%"></div></body></body></html>
